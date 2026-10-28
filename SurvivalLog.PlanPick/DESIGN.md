@@ -351,4 +351,4 @@
   interop 包装实例每次访问可能新造，ReferenceEquals 不可靠故用行数不用引用比对）。目录类信号走
   BuildLog（重建时补"Talent 表行数 a→b，目录重建"行）。PlanTicker 巡检保留但仅余 UI 管道职责
   （page.js 安装/payload 推送/键盘桥/启停门），不再承担"等表"数据职责。
-- 版本与发版（2026-10-28 起）：版本号单源 = 根 `version.json` 的 `mods.PlanPick` 字段（作者定义）；单 mod 发版走 `tools\release_mod.ps1 -Mod PlanPick`；本 mod 的 GitHub 镜像仓由 `tools\sync_repos.ps1` 从 HEAD 快照同步（详见 docs\superpowers\specs\2026-10-28-repo-split-and-online-update-design.md）。
+- 版本与发版（2026-10-28 起，v2 迁移后）：版本号单源=本仓 csproj <Version>（作者定义）；单 mod 发版=本仓 .\release.ps1；ModShared 改动源=中枢仓 suite\ModShared（push_modshared 推送）。
