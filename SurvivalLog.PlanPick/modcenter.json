@@ -1,0 +1,66 @@
+{
+  "mcSpec": 2,
+  "id": "com.local.survivallog.planpick",
+  "display": "自选生存规划",
+  "en": "PlanPick",
+  "summary": "生存规划改自选：解锁日全表候选 + 搜索 + 键盘；整数百分比加成。",
+  "usage": {
+    "intro": "每日规划不再赌三选一：规划页脚的「自选规划」入口打开全部规划目录，分类、筛选、搜索随便挑，想要哪张买哪张。",
+    "sections": [
+      {
+        "heading": "怎么用",
+        "bullets": [
+          "打开每日规划三选一页，点页脚「自选规划」；目录支持分类 / 系列筛选、状态筛选、排序和关键词搜索",
+          "未解锁项置灰，点一下显示还缺什么条件（存活天数 / 前置未购 / 角色不符）",
+          "不在今日三张里的按加价购买（默认两倍价，100~300 可调）；点购买先弹「原价 / 自选价 / 购买后剩余」确认，今日候选内永远原价"
+        ]
+      },
+      {
+        "heading": "提示",
+        "bullets": [
+          "购买、扣点、存档全走游戏官方逻辑，删 dll 即还原；已购规划保留",
+          "规划页激活期间键盘交给搜索框（游戏快捷键暂不触发），关页即恢复"
+        ]
+      }
+    ]
+  },
+  "groups": [
+    {
+      "title": "花费",
+      "order": 1,
+      "items": [
+        {
+          "key": "Cost:CostMultiplierPercent",
+          "label": "加成百分比（100=原值）",
+          "badge": "now",
+          "type": "int",
+          "def": 200,
+          "step": 5,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "title": "列表",
+      "order": 2,
+      "items": [
+        {
+          "key": "List:ShowLocked",
+          "label": "展示未解锁规划（置灰+原因）",
+          "badge": "now",
+          "type": "bool",
+          "def": true,
+          "order": 10
+        },
+        {
+          "key": "List:ShowUnpooled",
+          "label": "展示不入池规划",
+          "badge": "now",
+          "type": "bool",
+          "def": true,
+          "order": 20
+        }
+      ]
+    }
+  ]
+}
