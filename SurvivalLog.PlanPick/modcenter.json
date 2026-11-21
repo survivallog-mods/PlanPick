@@ -1,5 +1,6 @@
 {
   "mcSpec": 2,
+  "suite": true,
   "id": "com.local.survivallog.planpick",
   "display": "自选生存规划",
   "en": "PlanPick",
